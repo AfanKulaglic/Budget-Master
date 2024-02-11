@@ -1,0 +1,41 @@
+.authentification {
+  overflow-y: scroll;
+  text-align: center;
+  color: #c7c7c7;
+  height: 100%;
+  overflow-x: hidden;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  background-image: url("../images/backgroundImage.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.authentification h2 {
+  margin-top: 30px;
+  font-size: 8vw;
+  resize: none;
+  color: #c7c7c7;
+  text-align: start;
+}
+.authentification p {
+  color: #c7c7c7;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  text-align: start;
+}
+
+@media only screen and (min-width: 401px) and (max-width: 1024px) {
+  .authentification h2 {
+    font-size: 4vw;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .authentification {
+    padding-left: 20vw;
+    padding-right: 20vw;
+  }
+  .authentification h2 {
+    font-size: 2vw;
+  }
+}/*# sourceMappingURL=login.css.map */

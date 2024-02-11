@@ -1,0 +1,41 @@
+@import 'variables';
+
+.authentification {
+    @include defaultPage();
+    @include defaultMargin();
+    background-image: url('../images/backgroundImage.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    h2 {
+        margin-top: 30px;
+        font-size: $largeFont;
+        resize: none;
+        color: $quaternaryColor;
+        text-align: start;
+    }
+    p {
+        color: $quaternaryColor;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        text-align: start;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 1024px) {
+    .authentification {
+        h2 {
+            font-size: $largeFontTablet;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .authentification {
+        padding-left: 20vw;
+        padding-right: 20vw;
+        h2 {
+            font-size: $largeFontDesktop;
+        }
+    }
+}

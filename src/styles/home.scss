@@ -1,0 +1,852 @@
+@import 'variables';
+
+.home {
+    @include defaultPage();
+
+    .card {
+        margin-top: 17vw;
+        width: 100vw;
+        background-color: $tertiaryColor;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        color: white;
+        text-align: start;
+        border-top: 2px solid $tertiaryColor;
+        padding: $paddingCard;
+
+        .card-content-top {
+            display: flex;
+            padding: 0px;
+            width: 100%;
+
+            .col {
+                width: 65vw;
+            }
+
+            .col1 {
+                width: 35vw;
+            }
+
+            p {
+                margin-left: 0px;
+                font-size: $smallFont;
+                margin: 0px;
+            }
+
+            h2 {
+                font-size: $largeFont;
+                font-weight: $boldFont;
+                margin: 0px;
+            }
+
+            span {
+                font-size: $smallFont;
+                background-color: $tertiaryColor;
+                border: 1px solid gray;
+                padding-left: 5px;
+                padding-right: 5px;
+                border-radius: 20px;
+                color: yellow;
+            }
+        }
+
+        .card-content-bottom {
+            display: flex;
+            height: 37vw;
+            padding: 0px;
+            margin-top: 2vw;
+
+            .carousel {
+                width: 73vw;
+                display: flex;
+            }
+
+            .item {
+                margin-top: auto;
+                margin-bottom: auto;
+                border: 1px solid gray;
+                background-color: $tertiaryColor;
+                height: 37vw;
+                border-radius: 16px;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                padding: 1vw;
+                margin-right: 2vw;
+
+                #options-icon {
+                    color: white;
+                    margin-bottom: auto;
+                    font-size: 8vw;
+                    border-radius: 50%;
+                    padding: 1vw;
+                    display: flex;
+                    margin-left: auto;
+                    border: 1px solid $quaternaryColor;
+                }
+
+                .item-content {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+
+                p {
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-align: center;
+                    font-weight: $normalFont;
+                    text-transform: uppercase;
+                    margin: 0px;
+                    margin-bottom: 1vw;
+                    margin-bottom: auto;
+                }
+
+                h6 {
+                    font-weight: $boldFont;
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-align: center;
+                    margin-bottom: auto;
+                }
+            }
+
+            .first-item {
+                background-image: url('https://i.ibb.co/Jn5DHxt/download.jpg');
+                background-size: cover;
+            }
+
+            .second-item {
+                background-image: url('https://i.ibb.co/XFmqh9F/abstract-stock-skyblue-wallpaper-preview.jpg');
+                background-size: cover;
+            }
+
+            .third-item {
+                background-image: url('https://i.ibb.co/YTG9wxs/360-F-501048762-y3j0-DF3-Haa-Xw-Qotn-G51tg-FS3h-PMngo-FP.jpg');
+                background-size: cover;
+            }
+
+
+            .add-item {
+                height: 37vw;
+                text-align: center;
+                border-radius: 16px;
+                margin-right: 2vw;
+                border: 1px solid gray;
+                background-color: $tertiaryColor;
+                margin-top: auto;
+                margin-bottom: auto;
+                display: flex;
+
+                #add-icon {
+                    font-size: 40px;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+            }
+
+            .btn {
+                background-color: red;
+            }
+        }
+    }
+
+    .my-income {
+        text-align: start;
+
+
+        h6 {
+            margin: 0px;
+            padding: 2vw;
+        }
+
+        .cards {
+            width: 50vw;
+            margin-top: 2vw;
+            margin-bottom: 2vw;
+            background-color: $tertiaryColor;
+            border-radius: 30px;
+            color: white;
+            text-align: start;
+            padding: $paddingCard;
+
+            .cards-top {
+                display: flex;
+
+                .icon {
+                    border: 2px solid gray;
+                    border-radius: 50%;
+                    padding: 1vw;
+                    font-size: 8vw;
+                }
+
+                .dots {
+                    margin-left: auto;
+                    border: 2px solid transparent;
+                }
+            }
+
+            .cards-bottom {
+                p {
+                    margin: 0px;
+                    margin-top: 2.5vw;
+                }
+
+                h6 {
+                    padding: 0px;
+                    margin-top: 2vw;
+                }
+            }
+        }
+
+        .cards:nth-child(2) {
+            margin-left: 1.5vw;
+            margin-right: 2vw;
+        }
+
+        .cards:nth-child(1) {
+            margin-left: 2vw;
+        }
+    }
+
+    .spending-monthly {
+        text-align: start;
+
+        h6 {
+            margin: 0px;
+            padding: 2vw;
+        }
+
+        .cards {
+            width: 95vw;
+            margin: 2vw;
+            margin-bottom: 5vw;
+            background-color: $tertiaryColor;
+            border-radius: 30px;
+            color: white;
+            text-align: start;
+            display: flex;
+            background-color: $tertiaryColor;
+            animation: changeColor1 0.5s ease-in-out;
+        }
+
+        .clicked {
+            animation: changeColor 0.5s ease-in-out;
+            background-color: #b81212;
+        }
+
+        @keyframes changeColor1 {
+            0% {
+                background-color: #b81212;
+                /* Početna boja */
+            }
+
+            100% {
+                background-color: $tertiaryColor;
+                /* Nova boja */
+            }
+        }
+
+        @keyframes changeColor {
+            0% {
+                background-color: initial;
+                /* Početna boja */
+            }
+
+            100% {
+                background-color: #b81212;
+                /* Nova boja */
+            }
+        }
+
+        .icon {
+            background-color: $tertiaryColor;
+            border: 2px solid $quaternaryColor;
+            border-radius: 50%;
+            height: 13vw;
+            width: 13vw;
+            padding: 1vw;
+        }
+
+        .first {
+            background-color: $secondaryColor;
+        }
+
+        h6 {
+            margin: 0px;
+        }
+
+        div {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 2vw;
+        }
+
+        p {
+            margin: 0px;
+            font-size: 4vw;
+        }
+
+        h2 {
+            margin-left: auto;
+            margin-right: 4vw;
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 7vw;
+        }
+
+        span {
+            font-size: 2.5vw;
+            margin: 0px;
+        }
+    }
+
+    .home-chart {
+        background-color: transparent;
+        color: white;
+        fill: red;
+        height: 110px;
+        overflow: hidden;
+    }
+
+    .statistic-chart {
+        text-align: start;
+        margin: 2.5vw;
+        margin-top: 5vw;
+
+        .statistic-chart-content {
+            background: transparent;
+            color: white;
+            font-size: 20px;
+            fill: red;
+            margin-bottom: 5vw;
+            background-color: $tertiaryColor;
+            border-radius: 30px;
+            display: flex;
+        }
+
+        #img {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 60px;
+            width: 250px;
+        }
+    }
+
+    .statistic-card {
+        margin-top: 17vw;
+        width: 100vw;
+        background-color: $tertiaryColor;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        color: white;
+        text-align: start;
+        border-top: 2px solid $tertiaryColor;
+        padding: $paddingCard;
+
+        p {
+            margin: 0px;
+        }
+
+        h2 {
+            margin: 0px;
+            margin-top: 3vw;
+        }
+
+        .progress-label {
+            margin-top: 4vw;
+        }
+
+        .progress-bar {
+            height: 6vw;
+            background-color: rgba(255, 255, 255, 0.055)
+        }
+    }
+
+    .card-management {
+        text-align: start;
+        margin: 2.5vw;
+        margin-top: 21vw;
+
+        .statistic-chart-content {
+            background: transparent;
+            color: white;
+            font-size: 20px;
+            fill: red;
+            margin-bottom: 5vw;
+            background-color: $tertiaryColor;
+            border-radius: 30px;
+        }
+
+        .cards {
+            width: 50vw;
+            margin-top: 2vw;
+            margin-bottom: 2vw;
+            background-color: $tertiaryColor;
+            border-radius: 30px;
+            color: white;
+            text-align: start;
+            padding: $paddingCard;
+            width: 100%;
+            display: flex;
+
+            p {
+                margin: 0px;
+                padding: 0px;
+                font-size: 10px;
+            }
+
+            h6 {
+                margin: 0px;
+                padding: 0px;
+            }
+        }
+    }
+}
+
+.add-expense {
+    p {
+        margin: 0px;
+        margin-top: 4vw;
+        text-align: center;
+    }
+
+    #input {
+        background: transparent;
+        height: 45px;
+        width: 100%;
+        border: 0.5px solid #929292;
+        border-radius: 5px;
+        padding-left: 10px;
+        color: white;
+        font-size: 15px;
+        background-color: $tertiaryColor;
+    }
+
+    #input-icon {
+        background: transparent;
+        height: 45px;
+        width: 100%;
+        border: 0.5px solid #929292;
+        margin: 0px;
+        padding: 0px;
+        border-radius: 5px;
+        padding-left: 10px;
+        color: white;
+        font-size: 15px;
+        background-color: $tertiaryColor;
+    }
+
+    button {
+        width: 100%;
+        height: 45px;
+        margin-top: 30px;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: $secondaryColor;
+        border: 2pxsolid gray;
+        color: white;
+        font-size: 14px;
+    }
+}
+
+.add-expense:focus {
+    border: 2px solid green;
+}
+
+
+@media only screen and (min-width: 401px) and (max-width: 1024px) {
+    .home {
+
+        .card {
+            margin-top: 9vw;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding: $paddingCard;
+
+            .card-content-top {
+
+                .col {
+                    width: 70vw;
+                }
+
+                .col1 {
+                    width: 30vw;
+                }
+
+                p {
+                    font-size: $largeFontTablet;
+                }
+
+                h2 {
+                    font-size: $largeFontTablet;
+                }
+
+                span {
+                    font-size: $mediumFontTablet;
+                }
+            }
+
+            .card-content-bottom {
+                height: 30vw;
+
+                .carousel {
+                    width: 100%;
+                }
+
+                .item {
+                    height: 30vw;
+
+                    #options-icon {
+                        font-size: 5vw;
+                    }
+
+                    h6 {
+                        font-size: $mediumFontTablet;
+                    }
+                }
+
+
+                .add-item {
+                    height: 30vw;
+                }
+            }
+        }
+
+        .my-income {
+            h6 {
+                font-size: $mediumFontTablet;
+                padding-bottom: 0px;
+            }
+
+            .cards {
+
+                .cards-top {
+                    display: flex;
+
+                    .icon {
+                        border: 2px solid gray;
+                        font-size: 6vw;
+                    }
+
+                    .dots {
+                        font-size: 5vw;
+                    }
+                }
+            }
+        }
+
+        .spending-monthly {
+
+            h6 {
+                font-size: $mediumFontTablet;
+                padding-bottom: 0px;
+            }
+
+            .cards {
+                margin-bottom: 2vw;
+            }
+
+            .icon {
+                height: 8vw;
+                width: 8vw;
+            }
+
+            h6 {
+                margin: 0px;
+            }
+
+            div {
+                margin-top: auto;
+                margin-bottom: auto;
+                margin-left: 2vw;
+            }
+
+            p {
+                font-size: 2vw;
+            }
+
+            h2 {
+                font-size: 4vw;
+            }
+        }
+
+        .home-chart {
+            height: 150px;
+        }
+
+        .statistic-chart {
+            margin-top: 3vw;
+            margin-bottom: 0px;
+
+            h6 {
+                font-size: $mediumFontTablet;
+            }
+
+            .statistic-chart-content {
+                margin-bottom: 2vw;
+                padding-bottom: 5vw;
+            }
+
+            #img {
+                padding: 60px;
+                width: 300px;
+            }
+        }
+
+        .statistic-card {
+            margin-top: 9vw;
+
+            p {
+                font-size: $mediumFontTablet;
+            }
+
+            h2 {
+                font-size: $largeFontTablet;
+            }
+
+            h6 {
+                font-size: $mediumFontTablet;
+            }
+
+            .progress-bar {
+                height: 4vw;
+            }
+        }
+
+        .card-management {
+            margin-top: 9vw;
+
+            h6 {
+                font-size: $mediumFontTablet;
+            }
+
+            .statistic-chart-content {
+                background: transparent;
+                color: white;
+                margin-bottom: 5vw;
+                background-color: $tertiaryColor;
+                border-radius: 30px;
+            }
+
+            .cards {
+                padding: 1.5vw;
+
+                p {
+                    font-size: $smallFontTablet;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .home {
+        padding-left: 20vw;
+        padding-right: 20vw;
+
+        .card {
+            margin-top: 3vw;
+            width: 100%;
+
+            .card-content-top {
+                padding: 1vw;
+                padding-bottom: 0vw;
+
+                .col {
+                    width: 85vw;
+                }
+
+                .col1 {
+                    width: 15vw;
+                }
+
+                p {
+                    font-size: $mediumFontDesktop;
+                }
+
+                h2 {
+                    font-size: $largeFontDesktop;
+                }
+
+                span {
+                    font-size: $mediumFontDesktop;
+                }
+            }
+
+            .card-content-bottom {
+                height: 12vw;
+                padding: 1vw;
+                padding-top: 0vw;
+                margin-top: 0vw;
+
+                .carousel {
+                    width: 100%;
+                }
+
+                .item {
+                    height: 10vw;
+                    margin:0.5vw;
+
+                    #options-icon {
+                        font-size: 1.5vw;
+                        padding: 0.4vw;
+                    }
+
+                    h6 {
+                        font-size: $mediumFontDesktop;
+                    }
+                }
+
+
+                .add-item {
+                    height: 10vw;
+                    margin-right: 1vw;
+                }
+            }
+        }
+
+        .my-income {
+            h6 {
+                font-size: $mediumFontDesktop;
+                margin-left: 0.5vw;
+                padding-bottom: 1vw;
+            }
+
+            p {               
+                padding-left: 0.5vw;
+            }
+
+            .cards {
+                margin-top: 0.5vw;
+
+                .cards-top {
+                    display: flex;
+
+                    .icon {
+                        border: 2px solid gray;
+                        font-size: 4vw;
+                    }
+
+                    .dots {
+                        font-size: 2.5vw;
+                        padding:0.7vw;
+                    }
+                }
+            }
+        }
+
+        .spending-monthly {
+            width: 100%;
+            padding-left: 2vw;
+            padding-right: 2vw;
+
+            h6 {
+                font-size: $mediumFontDesktop;
+                padding-left: 0.5vw;
+                padding-bottom: 1vw;
+            }
+
+            .cards {
+                margin-top: 0.5vw;
+                margin-bottom: 1.5vw;
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .icon {
+                height: 4vw;
+                width: 4vw;
+            }
+
+            h6 {
+                margin: 0px;
+            }
+
+            div {
+                margin-top: auto;
+                margin-bottom: auto;
+                margin-left: 1vw;
+            }
+
+            p {
+                font-size: 1vw;
+            }
+
+            h2 {
+                font-size: 2vw;
+                margin-right: 1vw;///
+            }
+        }
+
+        .home-chart {
+            height: 150px;
+        }
+
+        .statistic-chart {
+            margin-top: 3vw;
+            margin-bottom: 0px;
+
+            h6 {
+                font-size: $mediumFontDesktop;
+            }
+
+            .statistic-chart-content {
+                margin-bottom: 0vw;
+                padding-bottom: 5vw;
+            }
+
+            #img {
+                padding: 10px;
+                width: 300px;
+            }
+        }
+
+        .statistic-card {
+            margin-top: 4vw;
+            width: 100%;
+
+            p {
+                font-size: $mediumFontDesktop;
+            }
+
+            h2 {
+                font-size: $largeFontDesktop;
+            }
+
+            h6 {
+                font-size: $mediumFontDesktop;
+            }
+
+            .progress-bar {
+                height: 2vw;
+            }
+        }
+
+        .card-management {
+            margin-top: 4.5vw;
+
+            h6 {
+                font-size: $mediumFontDesktop;
+            }
+
+            .statistic-chart-content {
+                background: transparent;
+                color: white;
+                margin-bottom: 5vw;
+                background-color: $tertiaryColor;
+                border-radius: 30px;
+            }
+
+            .cards {
+                padding: 1vw;
+
+                p {
+                    font-size: $smallFontDesktop;
+                }
+            }
+        }
+    }
+}

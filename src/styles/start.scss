@@ -1,0 +1,548 @@
+@import 'variables';
+
+// styles
+
+.icon-chooser {
+    margin: 3vw;
+    border-radius: 20vw;
+
+    p {
+        color: white;
+        text-align: center;
+    }
+
+    .icon-row {
+        border: 1px solid gray;
+        border-radius: 10px;
+        height: 39vw;
+        overflow: scroll;
+        overflow-x: hidden;
+        text-align: center;
+
+        .col {
+            background-color: transparent;
+            padding: 1vw;
+            font-size: 10vw;
+            margin: 0vw;
+            display: flex;
+            justify-content: center;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .clicked {
+            background-color: $secondaryColor;
+            border-radius: 20%;
+        }
+    }
+}
+
+.loading-container {
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        z-index: 2;
+        width: 17vw;
+        height: auto;
+        margin-left: -8.5vw;
+        margin-top: -8.5vw;
+    }
+
+    .loader {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40vh;
+        margin-bottom: auto;
+        z-index: 1;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 27vw;
+    }
+
+    .loader:before,
+    .loader:after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        animation: pulsOut 1.8s ease-in-out infinite;
+        filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
+    }
+
+    .loader:before {
+        width: 100%;
+        padding-bottom: 100%;
+        box-shadow: inset 0 0 0 1rem $secondaryColor;
+        animation-name: pulsIn;
+    }
+
+    .loader:after {
+        width: calc(100% - 2rem);
+        padding-bottom: calc(100% - 2rem);
+        box-shadow: 0 0 0 0 $secondaryColor;
+    }
+
+    @keyframes pulsIn {
+        0% {
+            box-shadow: inset 0 0 0 1rem $secondaryColor;
+            opacity: 1;
+        }
+
+        50%,
+        100% {
+            box-shadow: inset 0 0 0 0 $secondaryColor;
+            opacity: 0;
+        }
+    }
+
+    @keyframes pulsOut {
+
+        0%,
+        50% {
+            box-shadow: 0 0 0 0 $secondaryColor;
+            opacity: 0;
+        }
+
+        100% {
+            box-shadow: 0 0 0 1rem $secondaryColor;
+            opacity: 1;
+        }
+    }
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px;
+    z-index: 2;
+
+    .toolbar {
+        background-color: $tertiaryColor;
+    }
+
+    .chip {
+        font-size: $smallFont;
+        color: $quaternaryColor;
+
+        p {
+            font-size: $smallFont;
+            margin-left: auto;
+            font-weight: $normalFont;
+            color: $quaternaryColor;
+        }
+    }
+
+    p {
+        margin-top: auto;
+        margin-bottom: auto;
+        text-align: start;
+        margin-left: 2vw;
+        color: gray;
+    }
+
+    span {
+        color: white;
+    }
+
+    img {
+        width: 15vw;
+        height: auto;
+        border-radius: 20vh;
+    }
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    background-color: $tertiaryColor;
+    display: flex;
+    padding: 0px;
+    border-radius: 20vw;
+    margin-left: 30vw;
+    padding: 1.5vw;
+    border: 0.5px solid silver;
+    margin-bottom: 3vw;
+
+    .icon {
+        margin: 0px;
+        font-size: 12vw;
+        border-radius: 50%;
+        padding: 2.5vw;
+        transition: background 0.7s ease;
+    }
+
+    .active {
+        background-color: $secondaryColor;
+    }
+}
+
+
+.App {
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: $primaryColor;
+
+    h6 {
+        font-size: $mediumFont;
+    }
+
+    h2 {
+        font-size: $largeFont;
+    }
+
+    p {
+        font-size: $smallFont;
+    }
+
+    .snackbar {
+        #btn {
+            color: $secondaryColor
+        }
+    }
+
+    .start {
+        @include defaultPage();
+
+        .main-container {
+            position: fixed;
+            bottom: 0;
+            margin-bottom: 18vh;
+        }
+
+        img {
+            height: 28vh;
+            margin-bottom: 8vh;
+        }
+
+        h2 {
+            text-align: start;
+            @include startMargin();
+            font-weight: $normalFont;
+
+            span {
+                font-weight: $boldFont;
+            }
+        }
+
+        p {
+            text-align: start;
+            font-weight: $normalFont;
+            @include startMargin();
+        }
+
+        .slide-to-start {
+            position: fixed;
+            bottom: 0;
+            height: 14vw;
+            width: 80vw;
+            background-color: $tertiaryColor;
+            overflow: hidden;
+            user-select: none;
+            touch-action: none;
+            @include startMargin();
+            margin-bottom: 4vw;
+            border-radius: 20vw;
+            border: 1px solid rgba(255, 0, 0, 0);
+        }
+
+        .button-to-edit {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            height: 14vw;
+            width: 80vw;
+            background-color: $tertiaryColor;
+            overflow: hidden;
+            user-select: none;
+            touch-action: none;
+            @include startMargin();
+            margin-bottom: 4vw;
+            margin-left: 10vw;
+            border-radius: 20vw;
+            border: 1px solid rgba(255, 0, 0, 0);
+        }
+
+        .slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 13vw;
+            height: 100%;
+            background-color: $secondaryColor;
+            transition: transform 0.4s ease;
+            border-radius: 50%;
+        }
+
+        .confirm-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 13vw;
+            height: 100%;
+            background-color: $primaryColor;
+            transition: transform 0.4s ease;
+            border-radius: 50%;
+            transform: translateX(66.3vw);
+        }
+
+        .label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-100%, -50%);
+            font-size: $mediumFont;
+            font-weight: $normalFont;
+            color: $quaternaryColor;
+        }
+
+        .slide-to-start.unlocked .slider {
+            transform: translateX(66.3vw);
+        }
+
+
+        .icon {
+            margin-top: 3.8vw;
+            height: 6vw;
+            width: 6vw;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 401px) and (max-width: 1024px) {
+    .icon-row {
+        border: 1px solid gray;
+        border-radius: 10px;
+        height: 39vw;
+        overflow: scroll;
+        overflow-x: hidden;
+        text-align: center;
+
+        .col {
+            padding: 1vw;
+            font-size: 10vw;
+        }
+
+        .clicked {
+            background-color: $secondaryColor;
+            border-radius: 20%;
+        }
+    }
+
+    .loading-container {
+        .loader {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40vh;
+            margin-bottom: auto;
+            z-index: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 18vw;
+        }
+
+        img {
+            width: 15vw;
+            margin-left: -7.5vw;
+            margin-top: -7.5vw;
+        }
+    }
+
+    .header {
+        .chip p {
+            font-size: $smallFontTablet;
+            color: $quaternaryColor;
+        }
+    }
+
+    .navbar {
+        margin-left: 38vw;
+        padding: 1vw;
+        margin-bottom: 2vw;
+
+        .icon {
+            font-size: 7vw;
+            padding: 1.5vw;
+        }
+    }
+
+    .App {
+        h6 {
+            font-size: $mediumFontTablet;
+        }
+
+        h2 {
+            font-size: $largeFontTablet;
+        }
+
+        p {
+            font-size: $smallFontTablet;
+        }
+
+        .start {
+
+            .slide-to-start,
+            .button-to-edit {
+                height: 8vw;
+                width: 80vw;
+            }
+
+            .slider {
+                width: 8vw;
+                background-color: $secondaryColor;
+            }
+
+            .confirm-slider {
+                width: 8vw;
+                transform: translateX(72vw);
+            }
+
+            .label {
+                font-size: $mediumFontTablet;
+            }
+
+            .icon {
+                margin-top: 2vw;
+                height: 4vw;
+                width: 4vw;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .icon-row {
+        border: 1px solid gray;
+        border-radius: 10px;
+        height: 39vw;
+        overflow: scroll;
+        overflow-x: hidden;
+        text-align: center;
+
+        .col {
+            padding: 1vw;
+            font-size: 10vw;
+        }
+
+        .clicked {
+            background-color: $secondaryColor;
+            border-radius: 20%;
+        }
+    }
+
+    .loading-container {
+        .loader {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40vh;
+            margin-bottom: auto;
+            z-index: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 5vw;
+        }
+
+        img {
+            width: 4vw;
+            margin-left: -2vw;
+            margin-top: -2vw;
+        }
+    }
+
+    .header {
+        .chip {
+            p {
+                font-size: $smallFontDesktop;
+                color: $quaternaryColor;
+            }
+        }
+    }
+
+    .navbar {
+        margin: 0.3vw;
+        margin-left: 25vw;
+        padding: 0.5vw;
+        top: 0;
+        bottom: auto;
+        margin-bottom: 0;
+        z-index: 2;
+        background: $tertiaryColor;
+
+        .icon {
+            font-size: 2vw;
+            padding: 0.4vw;
+        }
+    }
+
+    .App {
+        h6 {
+            font-size: $mediumFontDesktop;
+        }
+
+        h2 {
+            font-size: $largeFontDesktop;
+        }
+
+        p {
+            font-size: $smallFontDesktop;
+        }
+
+        .start {
+            display: flex;
+            justify-content: center;
+
+            p {
+                font-size: $mediumFontDesktop;
+            }
+
+            img {
+                height: 20vw;
+            }
+
+            .slide-to-start,
+            .button-to-edit {
+                height: 3.5vw;
+                width: 80vw;
+            }
+
+            .slider {
+                width: 8vw;
+                background-color: $secondaryColor;
+            }
+
+            .confirm-slider {
+                width: 8vw;
+                transform: translateX(72vw);
+            }
+
+            .label {
+                font-size: $mediumFontDesktop;
+            }
+
+            .icon {
+                margin-top: 2vw;
+                height: 4vw;
+                width: 4vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+@import 'variables';
+
+.edit-profile {
+    @include defaultPage();
+    @include defaultMargin();
+    background-image: url('https://i.ibb.co/MPKSz0V/screen-0.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    h2 {
+        margin-top: 30px;
+        font-size: $largeFont;
+        resize: none;
+        color: $quaternaryColor;
+        text-align: start;
+    }
+    p {
+        text-align: start;
+    }
+    span {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        text-align: center;
+        margin-bottom: 0px;
+        font-size: 3.3vw;
+        color: #929292;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    input {
+        background: transparent;
+        height: 45px;
+        border: 0.5px solid #929292;
+        border-radius: 5px;
+        padding-left: 10px;
+        color: white;
+        font-size: 15px;
+        background-color: $tertiaryColor;
+    }
+    #input-monthly-budget {
+        width: 70%;
+    }
+    #input-value-money {
+        width: 30%;
+    }
+    button {
+        width: 100%;
+        height: 45px;
+        margin-top: 30px;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: $secondaryColor;
+        border: 2px solid gray;
+        color: white;
+        font-size: 14px;
+    }
+}
+
+
+@media only screen and (min-width: 401px) and (max-width: 1024px) {
+    .edit-profile {
+        h2 {
+            font-size: $largeFontTablet;
+        }
+        span {
+            font-size: 2vw;
+        }
+        button {
+            font-size: 14px;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .edit-profile {
+        padding-left: 20vw;
+        padding-right: 20vw;
+
+        h2 {
+            font-size: $largeFontDesktop;
+        }
+        span {
+            font-size: 0.8vw;
+        }
+        button {
+            font-size: 14px;
+        }
+    }
+}
+

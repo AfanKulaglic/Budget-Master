@@ -1,0 +1,458 @@
+.icon-chooser {
+  margin: 3vw;
+  border-radius: 20vw;
+}
+.icon-chooser p {
+  color: white;
+  text-align: center;
+}
+.icon-chooser .icon-row {
+  border: 1px solid gray;
+  border-radius: 10px;
+  height: 39vw;
+  overflow: scroll;
+  overflow-x: hidden;
+  text-align: center;
+}
+.icon-chooser .icon-row .col {
+  background-color: transparent;
+  padding: 1vw;
+  font-size: 10vw;
+  margin: 0vw;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.icon-chooser .icon-row .clicked {
+  background-color: #6115c4;
+  border-radius: 20%;
+}
+
+.loading-container {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+.loading-container img {
+  position: absolute;
+  z-index: 2;
+  width: 17vw;
+  height: auto;
+  margin-left: -8.5vw;
+  margin-top: -8.5vw;
+}
+.loading-container .loader {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40vh;
+  margin-bottom: auto;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 27vw;
+}
+.loading-container .loader:before,
+.loading-container .loader:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  animation: pulsOut 1.8s ease-in-out infinite;
+  filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
+}
+.loading-container .loader:before {
+  width: 100%;
+  padding-bottom: 100%;
+  box-shadow: inset 0 0 0 1rem #6115c4;
+  animation-name: pulsIn;
+}
+.loading-container .loader:after {
+  width: calc(100% - 2rem);
+  padding-bottom: calc(100% - 2rem);
+  box-shadow: 0 0 0 0 #6115c4;
+}
+@keyframes pulsIn {
+  0% {
+    box-shadow: inset 0 0 0 1rem #6115c4;
+    opacity: 1;
+  }
+  50%, 100% {
+    box-shadow: inset 0 0 0 0 #6115c4;
+    opacity: 0;
+  }
+}
+@keyframes pulsOut {
+  0%, 50% {
+    box-shadow: 0 0 0 0 #6115c4;
+    opacity: 0;
+  }
+  100% {
+    box-shadow: 0 0 0 1rem #6115c4;
+    opacity: 1;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0px;
+  z-index: 2;
+}
+.header .toolbar {
+  background-color: #202020;
+}
+.header .chip {
+  font-size: 4vw;
+  color: #c7c7c7;
+}
+.header .chip p {
+  font-size: 4vw;
+  margin-left: auto;
+  font-weight: 300;
+  color: #c7c7c7;
+}
+.header p {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: start;
+  margin-left: 2vw;
+  color: gray;
+}
+.header span {
+  color: white;
+}
+.header img {
+  width: 15vw;
+  height: auto;
+  border-radius: 20vh;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  background-color: #202020;
+  display: flex;
+  padding: 0px;
+  border-radius: 20vw;
+  margin-left: 30vw;
+  padding: 1.5vw;
+  border: 0.5px solid silver;
+  margin-bottom: 3vw;
+}
+.navbar .icon {
+  margin: 0px;
+  font-size: 12vw;
+  border-radius: 50%;
+  padding: 2.5vw;
+  transition: background 0.7s ease;
+}
+.navbar .active {
+  background-color: #6115c4;
+}
+
+.App {
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: #1a1a1a;
+}
+.App h6 {
+  font-size: 5vw;
+}
+.App h2 {
+  font-size: 8vw;
+}
+.App p {
+  font-size: 4vw;
+}
+.App .snackbar #btn {
+  color: #6115c4;
+}
+.App .start {
+  overflow-y: scroll;
+  text-align: center;
+  color: #c7c7c7;
+  height: 100%;
+  overflow-x: hidden;
+}
+.App .start .main-container {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 18vh;
+}
+.App .start img {
+  height: 28vh;
+  margin-bottom: 8vh;
+}
+.App .start h2 {
+  text-align: start;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  font-weight: 300;
+}
+.App .start h2 span {
+  font-weight: 600;
+}
+.App .start p {
+  text-align: start;
+  font-weight: 300;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.App .start .slide-to-start {
+  position: fixed;
+  bottom: 0;
+  height: 14vw;
+  width: 80vw;
+  background-color: #202020;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  touch-action: none;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 4vw;
+  border-radius: 20vw;
+  border: 1px solid rgba(255, 0, 0, 0);
+}
+.App .start .button-to-edit {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 14vw;
+  width: 80vw;
+  background-color: #202020;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  touch-action: none;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 4vw;
+  margin-left: 10vw;
+  border-radius: 20vw;
+  border: 1px solid rgba(255, 0, 0, 0);
+}
+.App .start .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 13vw;
+  height: 100%;
+  background-color: #6115c4;
+  transition: transform 0.4s ease;
+  border-radius: 50%;
+}
+.App .start .confirm-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 13vw;
+  height: 100%;
+  background-color: #1a1a1a;
+  transition: transform 0.4s ease;
+  border-radius: 50%;
+  transform: translateX(66.3vw);
+}
+.App .start .label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -50%);
+  font-size: 5vw;
+  font-weight: 300;
+  color: #c7c7c7;
+}
+.App .start .slide-to-start.unlocked .slider {
+  transform: translateX(66.3vw);
+}
+.App .start .icon {
+  margin-top: 3.8vw;
+  height: 6vw;
+  width: 6vw;
+}
+
+@media only screen and (min-width: 401px) and (max-width: 1024px) {
+  .icon-row {
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: 39vw;
+    overflow: scroll;
+    overflow-x: hidden;
+    text-align: center;
+  }
+  .icon-row .col {
+    padding: 1vw;
+    font-size: 10vw;
+  }
+  .icon-row .clicked {
+    background-color: #6115c4;
+    border-radius: 20%;
+  }
+  .loading-container .loader {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40vh;
+    margin-bottom: auto;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 18vw;
+  }
+  .loading-container img {
+    width: 15vw;
+    margin-left: -7.5vw;
+    margin-top: -7.5vw;
+  }
+  .header .chip p {
+    font-size: 2vw;
+    color: #c7c7c7;
+  }
+  .navbar {
+    margin-left: 38vw;
+    padding: 1vw;
+    margin-bottom: 2vw;
+  }
+  .navbar .icon {
+    font-size: 7vw;
+    padding: 1.5vw;
+  }
+  .App h6 {
+    font-size: 3vw;
+  }
+  .App h2 {
+    font-size: 4vw;
+  }
+  .App p {
+    font-size: 2vw;
+  }
+  .App .start .slide-to-start,
+  .App .start .button-to-edit {
+    height: 8vw;
+    width: 80vw;
+  }
+  .App .start .slider {
+    width: 8vw;
+    background-color: #6115c4;
+  }
+  .App .start .confirm-slider {
+    width: 8vw;
+    transform: translateX(72vw);
+  }
+  .App .start .label {
+    font-size: 3vw;
+  }
+  .App .start .icon {
+    margin-top: 2vw;
+    height: 4vw;
+    width: 4vw;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .icon-row {
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: 39vw;
+    overflow: scroll;
+    overflow-x: hidden;
+    text-align: center;
+  }
+  .icon-row .col {
+    padding: 1vw;
+    font-size: 10vw;
+  }
+  .icon-row .clicked {
+    background-color: #6115c4;
+    border-radius: 20%;
+  }
+  .loading-container .loader {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40vh;
+    margin-bottom: auto;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 5vw;
+  }
+  .loading-container img {
+    width: 4vw;
+    margin-left: -2vw;
+    margin-top: -2vw;
+  }
+  .header .chip p {
+    font-size: 1vw;
+    color: #c7c7c7;
+  }
+  .navbar {
+    margin: 0.3vw;
+    margin-left: 25vw;
+    padding: 0.5vw;
+    top: 0;
+    bottom: auto;
+    margin-bottom: 0;
+    z-index: 2;
+    background: #202020;
+  }
+  .navbar .icon {
+    font-size: 2vw;
+    padding: 0.4vw;
+  }
+  .App h6 {
+    font-size: 1.2vw;
+  }
+  .App h2 {
+    font-size: 2vw;
+  }
+  .App p {
+    font-size: 1vw;
+  }
+  .App .start {
+    display: flex;
+    justify-content: center;
+  }
+  .App .start p {
+    font-size: 1.2vw;
+  }
+  .App .start img {
+    height: 20vw;
+  }
+  .App .start .slide-to-start,
+  .App .start .button-to-edit {
+    height: 3.5vw;
+    width: 80vw;
+  }
+  .App .start .slider {
+    width: 8vw;
+    background-color: #6115c4;
+  }
+  .App .start .confirm-slider {
+    width: 8vw;
+    transform: translateX(72vw);
+  }
+  .App .start .label {
+    font-size: 1.2vw;
+  }
+  .App .start .icon {
+    margin-top: 2vw;
+    height: 4vw;
+    width: 4vw;
+  }
+}/*# sourceMappingURL=start.css.map */

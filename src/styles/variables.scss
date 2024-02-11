@@ -1,0 +1,49 @@
+$primaryColor: #1a1a1a;
+$secondaryColor: #6115c4;
+$tertiaryColor: #202020;
+$quaternaryColor: #c7c7c7;
+
+$normalFont: 300;
+$boldFont: 600;
+
+$largeFont: 8vw;
+$smallFont: 4vw;
+$mediumFont: 5vw;
+
+$largeFontTablet: 4vw;
+$smallFontTablet: 2vw;
+$mediumFontTablet: 3vw;
+
+$largeFontDesktop: 2vw;
+$smallFontDesktop: 1vw;
+$mediumFontDesktop: 1.2vw;
+
+$paddingCard: 18px;
+
+$colorArray: red, #6115c4, blue, #c7c7c7;
+
+@function getRandomColor() {
+    $randomIndex: random(length($colorArray));
+    @return nth($colorArray, $randomIndex);
+}
+
+$randomColor: getRandomColor();
+
+@mixin startMargin {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+@mixin defaultMargin {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+@mixin defaultPage {
+    overflow-y: scroll;
+    text-align: center;
+    color: $quaternaryColor;
+    height: 100%;
+    overflow-x: hidden;
+}
+
